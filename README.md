@@ -2,7 +2,7 @@
 
 This repository contains the implementation of a novel approach for synthetic time series generation. The method combines Generative Adversarial Networks (GANs) with Transformer architectures to produce high-quality synthetic time series data. This project is designed to address the challenges of generating realistic and diverse time series data for various applications.
 
-Key Features
+# Key Features
 
 GAN Architecture: Utilizes a Wasserstein GAN with Gradient Penalty (WGAN-GP) to ensure stable training and high-quality outputs.
 
@@ -12,89 +12,43 @@ Synthetic Dataset: Trained on a dataset of sinusoidal waves, providing a control
 
 PyTorch Implementation: Built entirely using PyTorch, ensuring modularity, flexibility, and scalability.
 
-Repository Structure
+# Usage
 
-models/: Contains the implementation of the GAN and Transformer models.
+**Main function (Generate Synthetic Data):**
 
-data/: Scripts and tools for generating and preprocessing synthetic sinusoidal datasets.
+*python trainGAN.py*
 
-training/: Code for training the GAN with Wasserstein loss and gradient penalty.
+**Load training data function:**
 
-evaluation/: Utilities for assessing the quality of generated time series data.
+*python dataLoader.py*
 
-config/: Configuration files for experiment setups.
+**GAN Generator and Discriminator architecture:**
 
-notebooks/: Jupyter notebooks for exploratory analysis and visualization.
+*python GANModels.py*
 
-README.md: Overview of the project (you are here).
+**Training loop function:**
 
-Getting Started
+*python functions.py*
 
-Prerequisites
+**Sinusoidal waves dataset generator:**
 
-Python 3.8+
+*python utils/sinusoidalWavesDataset.py*
 
-PyTorch 1.10+
+**Configuration file:**
 
-Additional dependencies are listed in requirements.txt.
+*json cfg.json*
 
-Installation
+# Future Work
 
-Clone the repository:
+* Validation metrics
+* Conditional outputs based on metadata
+* Configurable output length of signal (currenly fixed length output)
+* Tokenization / embeding of time series 
 
-git clone https://github.com/yourusername/synthetic-time-series-gan.git
-cd synthetic-time-series-gan
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Usage
-
-Generate Synthetic Data:
-
-python generate_synthetic_data.py
-
-Train the Model:
-
-python train.py --config config/experiment1.yaml
-
-Evaluate the Model:
-
-python evaluate.py
-
-Configurations
-
-Experiment settings such as hyperparameters, model architecture, and training configurations are managed using YAML files located in the config/ directory. Modify these files to customize your experiments.
-
-Results
-
-The model demonstrates the ability to:
-
-Generate smooth and realistic sinusoidal time series.
-
-Capture complex temporal patterns with Transformer-based architectures.
-
-Train stably using Wasserstein loss with gradient penalty.
-
-Future Work
-
-Extend the approach to real-world time series datasets.
-
-Experiment with alternative GAN loss functions.
-
-Explore more advanced Transformer variants to enhance temporal modeling.
-
-Contributing
-
-Contributions are welcome! If you have suggestions for improving the model or adding new features, feel free to open an issue or submit a pull request.
-
-License
+# License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
 
-PyTorch: For providing a robust deep learning framework.
-
-Academic papers and resources on WGAN-GP and Transformers for inspiring this implementation.
+Xiaomin Li, Vangelis Metsis, Huangyingrui Wang, Anne Hee Hiong Ngu: [TTS-GAN: A Transformer-based Time-Series Generative Adversarial Network](https://arxiv.org/abs/2202.02691)
