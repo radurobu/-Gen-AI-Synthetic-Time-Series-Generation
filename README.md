@@ -12,6 +12,8 @@ Synthetic Dataset: Trained on a dataset of sinusoidal waves, providing a control
 
 PyTorch Implementation: Built entirely using PyTorch, ensuring modularity, flexibility, and scalability.
 
+![alt text](images/image_enhanced.png)
+
 # Usage
 
 **Main function (Generate Synthetic Data):**
